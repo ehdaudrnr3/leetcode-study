@@ -1,16 +1,22 @@
 package programmers;
 
+import java.util.HashSet;
+import java.util.Set;
+
 public class MaxPalindrome {
 
-	public static void main(String[] args) {
-		//String s = "abaaabba";
-		//String s = "abacde";
-		String s = "abcdcba";
-		int start = 0;
-		int end = s.length() - 1;
+	public static void main(String[] arg1s) {
+		String s= "kagoyzkgfjnyvjewazalxngpdcfahneqoqgiyjgpzobhaghmgzmnwcmeykqzgajlmuerhhsanpdtmrzibswswzjjbjqytgfewiuu";
 
-		int max = solution2(s);
-		System.out.println(max);
+		for(int i=1;i<s.length();i++) {
+			if(s.charAt(i-1) == s.charAt(i)) {
+				s = s.replace(s.substring(i-1, i), "") + s.substring(i+1);
+				i=0;
+			}
+		}
+        System.out.println(s.length() == 0 ? "Empty String" : s);
+		
+		//System.out.println(max);
 	}
 
 	public static int solution(String s) {

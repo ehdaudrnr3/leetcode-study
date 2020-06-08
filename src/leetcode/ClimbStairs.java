@@ -2,8 +2,26 @@ package leetcode;
 
 public class ClimbStairs {
 	public static void main(String[] args) {
-		int stairs = climbStairs(5);
-		System.out.println(stairs);
+		String S = "BAAABAB";
+		char[] chs = S.toCharArray();
+		char[] dp = new char[S.length()];
+		
+		if(S.length() < 3) {
+			System.out.println(0);
+		} 
+		
+		int count =0;
+		for(int i = 2; i<chs.length;i++) {
+			if(chs[i-2] != chs[i-1] && chs[i-1] == chs[i]) {
+				count++;
+			} else if(chs[i-2] != chs[i-1] && chs[i-1] != chs[i]){
+				count++;
+			}
+		}
+		System.out.println(count);
+		
+		
+		
 	}
 	
 	public static int climbStairs(int n) {
