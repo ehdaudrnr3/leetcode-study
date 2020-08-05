@@ -4,6 +4,7 @@ package leetcode.TreeNode;
      public int val;
      public TreeNode left;
      public TreeNode right;
+     public TreeNode parent;
      public TreeNode() {}
      public TreeNode(int val) { this.val = val; }
      public TreeNode(int val, TreeNode left, TreeNode right) {
@@ -11,4 +12,8 @@ package leetcode.TreeNode;
          this.left = left;
          this.right = right;
      }
+	public TreeNode(int val, TreeNode parent) {
+		this.val = val;
+		this.parent = parent;
+	}
  }

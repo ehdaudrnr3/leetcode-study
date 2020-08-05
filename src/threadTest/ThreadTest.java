@@ -45,8 +45,8 @@ class MyThread extends Thread {
 	
 	@Override
 	public void run() {
-		//key.useToilet(name);
-		key.useToToiletForBlock(name);
+		key.useToilet(name);
+		//key.useToToiletForBlock(name);
 	}
 }
 public class ThreadTest {
