@@ -2,8 +2,6 @@ package programmers.stackAndQueue;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.PriorityQueue;
-import java.util.Queue;
 
 /**
  * 기능개발
@@ -12,19 +10,15 @@ import java.util.Queue;
  */
 public class FunctionDevelop {
 	public static void main(String[] args) {
-		Solution sol = new Solution();
 		int[] progresses = { 93, 30, 55};
 		int[] speeds = {1,30,5};
 		
-		int[] answer = sol.solution(progresses, speeds);
+		int[] answer = solution(progresses, speeds);
 		for (int i : answer) {
 			System.out.println(i);
 		}
 	}
-}
-
-class Solution {
-	public int[] solution(int[] progresses, int[] speeds) {
+	public static int[] solution(int[] progresses, int[] speeds) {
         List<Integer> data = new ArrayList<>();
         
         int max = (100 - progresses[0]) / speeds[0];
@@ -46,3 +40,4 @@ class Solution {
         return answer;
     }
 }
+
