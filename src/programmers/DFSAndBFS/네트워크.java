@@ -25,9 +25,9 @@ public class 匙飘况农 {
 	static class Solution {
 		public int solution(int n, int[][] computers) {
 	        int answer = 0;
-	        boolean[] visit = new boolean[n];
+	        boolean visit[] = new boolean[n];
 	        
-	        for(int i=0;i<n;i++) {
+	        for(int i = 0; i < n; i++) {
 	        	if(!visit[i]) {
 	        		dfs(computers, i, visit);
 	        		answer++;
@@ -37,14 +37,15 @@ public class 匙飘况农 {
 	    }
 
 		private void dfs(int[][] computers, int i, boolean[] visit) {
+			if(visit[i]) return;
+			
 			visit[i] = true;
 			
-			for(int j=0;j<computers.length;j++) {
+			for(int j = 0;j < computers.length; j++) {
 				if(i != j && computers[i][j] == 1 && !visit[j]) {
 					dfs(computers, j, visit);
 				}
 			}
-			
 		}
 	}
 }
