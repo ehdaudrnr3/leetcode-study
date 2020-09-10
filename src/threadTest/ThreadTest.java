@@ -18,7 +18,13 @@ class Key {
 		System.out.println(name+" look at mirror");
 	}
 	
-	public synchronized void useToilet(String name) {
+	public void useToilet(String name) {
+		open(name);
+		close(name);
+		defecate(name);
+	}
+	
+	public synchronized void useToiletSync(String name) {
 		open(name);
 		close(name);
 		defecate(name);
@@ -45,8 +51,9 @@ class MyThread extends Thread {
 	
 	@Override
 	public void run() {
-		key.useToilet(name);
-		//key.useToToiletForBlock(name);
+		//key.useToilet(name);
+		//key.useToiletSync(name);
+		key.useToToiletForBlock(name);
 	}
 }
 public class ThreadTest {
