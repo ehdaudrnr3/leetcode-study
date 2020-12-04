@@ -1,19 +1,40 @@
 package threadTest;
 
-
+/**
+ * 쓰레드 테스트시 동기화 샘플을 하나의 화장실로 예로 들어 샘플코드를 만들어냄 
+ * @author mgpc
+ *
+ */
 class Key {
+	
+	/**
+	 * 화장실 문을연다
+	 * @param name
+	 */
 	public void open(String name) {
 		System.out.println(name+" is toilet open");
 	}
 	
+	/**
+	 * 화장싫 문을 닫는다.
+	 * @param name
+	 */
 	public void close(String name) {
 		System.out.println(name+" is toilet close");
 	}
 	
+	/**
+	 * 싼다
+	 * @param name
+	 */
 	public void defecate(String name) {
 		System.out.println(name+" have defecate");
 	}
 	
+	/**
+	 * 거울을 본다
+	 * @param name
+	 */
 	public void lookAtMirror(String name) {
 		System.out.println(name+" look at mirror");
 	}
@@ -51,12 +72,12 @@ class MyThread extends Thread {
 	
 	@Override
 	public void run() {
-		//key.useToilet(name);
+		key.useToilet(name);
 		//key.useToiletSync(name);
-		key.useToToiletForBlock(name);
+		//key.useToToiletForBlock(name);
 	}
 }
-public class ThreadTest {
+public class ThreadSyncSample {
 
 	public static void main(String[] args) {
 

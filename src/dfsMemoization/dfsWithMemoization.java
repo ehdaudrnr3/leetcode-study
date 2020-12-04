@@ -1,4 +1,4 @@
-package threadTest;
+package dfsMemoization;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -7,7 +7,12 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class SO {
+/**
+ * 재무재표 금액 표기시 dfs와 memeoization을 활용한 금액 말아올리기 예시
+ * @author mgpc
+ *
+ */
+public class dfsWithMemoization {
 
 	private static Map<String, List<Node>> map = new HashMap<>();
 	private static Map<String, Integer> amtMap = new HashMap<>();
@@ -188,7 +193,7 @@ class Node {
 
 	@Override
 	public String toString() {
-		return "Node [node=" + padLeft(node, node.length()+lv, ' ') + ", amt = "+amt+"]";
+		return "[코드 = " + padLeft(node, node.length()+lv, ' ') + ", 금액 = "+amt+"]";
 	}
 
 	public String padLeft(String word, int totalWidth, char paddingChar) {
