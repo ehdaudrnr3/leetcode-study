@@ -3,6 +3,9 @@ package leetcode.easy.greedy;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
+/**
+ * Difiiculty : Easy
+ */
 public class Last_stone_weight {
 	public static void main(String[] args) {
 		int[] stones = { 2, 7, 4, 1, 8, 1};
