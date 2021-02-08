@@ -1,4 +1,4 @@
-package leetcode.easy.greedy;
+package leetcode.greedy;
 
 import java.util.PriorityQueue;
 import java.util.Queue;
